@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turn-Based Chess-Like Game</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .board {
+            display: grid;
+            grid-template-columns: repeat(5, 50px);
+            grid-template-rows: repeat(5, 50px);
+            gap: 1px;
+        }
+        .cell {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background-color: white;
+            user-select: none;
+        }
+        .occupied {
+            background-color: lightgrey;
+        }
+        .highlight {
+            background-color: lightblue;
+        }
+        .dragging {
+            opacity: 0.5;
+        }
+        .drop-target {
+            border: 2px dashed blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="login-container">
+        <h2>Enter Your Player Name</h2>
+        <input type="text" id="player-name" placeholder="Player Name">
+        <button id="join-game">Join Game</button>
+    </div>
+    <div id="game-container" style="display:none;">
+        <div id="move-history">
+            <h3>Move History</h3>
+            <ul id="history-list"></ul>
+        </div>
+        <div id="turn">Current Turn: Player A</div>
+        <div id="board" class="board"></div>
+        <div id="controls">
+            <div id="message"></div>
+            <button id="new-game">Start New Game</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
