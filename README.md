@@ -1,1 +1,3 @@
 # 4dchesss
+
+UPDATED VERIZON
